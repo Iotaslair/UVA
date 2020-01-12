@@ -1,5 +1,9 @@
-#Doesn't work
-
+'''
+Doesn't work
+Problem from SENA contest (Division 1) 2016
+My Professor thought it would be fun to give us some problems from
+and actual competetion so that's where these problems are fun
+'''
 from functools import lru_cache
 
 @lru_cache(maxsize=None)

@@ -1,5 +1,9 @@
-//doesn't work
-
+/*
+Doesn't work
+Problem from SENA contest (Division 1) 2016
+My Professor thought it would be fun to give us some problems from
+and actual competetion so that's where these problems are fun
+*/
 import java.util.*;
 
 public class enclosure{
