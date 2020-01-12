@@ -1,3 +1,4 @@
+# https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=14&page=show_problem&problem=1223
 translation = {}
 line = input()
 while(line != ""):

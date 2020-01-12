@@ -21,54 +21,54 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.TreeMap;
 
+// https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=247&page=show_problem&problem=3644
 class Argus1203 {
-	static class CommandComparator implements Comparator<Command> {
-		public int compare(Command c1, Command c2) {
-			int out = c1.time-c2.time;
-			
-			if (out == 0) {
-				out = c1.out-c2.out;
-			}
-			
-			return out;
-		}
-	}
-	
-	static class Command {
-		int out;
-		int period;
-		int time;
-		
-		public Command(int out, int period, int time) {
-			this.out = out;
-			this.period = period;
-			this.time = time;
-		}
-	}
-	
-	public static void main(String[] args)
-	{	
-		Scanner reader = new Scanner(System.in);
-		PriorityQueue<Command> queue = new PriorityQueue<Command>(1000, new CommandComparator()); 
-		String in = reader.next();
-		while(!in.equals("#")) {
-			int out = reader.nextInt();
-			int period = reader.nextInt();
-			Command temp = new Command(out, period, period);
-			queue.add(temp);
-			
-			in = reader.next();
-		}
-		int times = reader.nextInt();
-		for(int i = 0; i < times; i++) {
-			Command temp = queue.poll();
-			System.out.println(temp.out);
-			temp.time = temp.time + temp.period;
-			queue.add(temp);
-		}
-		
-		
-	}
+    static class CommandComparator implements Comparator<Command> {
+        public int compare(Command c1, Command c2) {
+            int out = c1.time - c2.time;
+
+            if (out == 0) {
+                out = c1.out - c2.out;
+            }
+
+            return out;
+        }
+    }
+
+    static class Command {
+        int out;
+        int period;
+        int time;
+
+        public Command(int out, int period, int time) {
+            this.out = out;
+            this.period = period;
+            this.time = time;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        PriorityQueue<Command> queue = new PriorityQueue<Command>(1000, new CommandComparator());
+        String in = reader.next();
+        while (!in.equals("#")) {
+            int out = reader.nextInt();
+            int period = reader.nextInt();
+            Command temp = new Command(out, period, period);
+            queue.add(temp);
+
+            in = reader.next();
+        }
+        int times = reader.nextInt();
+        for (int i = 0; i < times; i++) {
+            Command temp = queue.poll();
+            System.out.println(temp.out);
+            temp.time = temp.time + temp.period;
+            queue.add(temp);
+        }
+
+
+    }
 }
 
 

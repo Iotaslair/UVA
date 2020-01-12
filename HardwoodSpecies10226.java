@@ -18,36 +18,36 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.TreeMap;
 
+// https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=14&page=show_problem&problem=1167
 class HardwoodSpecies10226 {
 
-	public static void main(String[] args)
-	{
-		Scanner reader = new Scanner(System.in);
-		TreeMap<String, Integer> treeThing = new TreeMap<String,Integer>();
-		int times = reader.nextInt();
-		reader.nextLine();
-		reader.nextLine();
-		for(int i = 0; i < times; i++) {
-			String tree = reader.nextLine();
-			int treeCount = 0;
-			while(!tree.isEmpty()) {
-				treeThing.put(tree, treeThing.getOrDefault(tree, 0) + 1);
-				treeCount++;
-				if (reader.hasNextLine())
-					tree = reader.nextLine();
-				else
-					break;
-			}
-			
-			NavigableMap<String, Integer> huntIsBroken = treeThing;
-			while(!huntIsBroken.isEmpty()) {
-				Map.Entry<String, Integer> value = huntIsBroken.pollFirstEntry();
-				System.out.printf("%s %.4f\n", value.getKey(), ((float)value.getValue()/treeCount * 100));
-			}
-			if (i<times-1)
-				System.out.println();
-			treeThing.clear();
-		}
-		
-	}
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        TreeMap<String, Integer> treeThing = new TreeMap<String, Integer>();
+        int times = reader.nextInt();
+        reader.nextLine();
+        reader.nextLine();
+        for (int i = 0; i < times; i++) {
+            String tree = reader.nextLine();
+            int treeCount = 0;
+            while (!tree.isEmpty()) {
+                treeThing.put(tree, treeThing.getOrDefault(tree, 0) + 1);
+                treeCount++;
+                if (reader.hasNextLine())
+                    tree = reader.nextLine();
+                else
+                    break;
+            }
+
+            NavigableMap<String, Integer> huntIsBroken = treeThing;
+            while (!huntIsBroken.isEmpty()) {
+                Map.Entry<String, Integer> value = huntIsBroken.pollFirstEntry();
+                System.out.printf("%s %.4f\n", value.getKey(), ((float) value.getValue() / treeCount * 100));
+            }
+            if (i < times - 1)
+                System.out.println();
+            treeThing.clear();
+        }
+
+    }
 }

@@ -21,40 +21,40 @@ import java.util.TreeMap;
 
 import javax.xml.ws.spi.http.HttpExchange;
 
+// https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=3&page=show_problem&problem=90
 class Recycling154 {
 
-	public static void main(String[] args)
-	{
-		Scanner reader = new Scanner(System.in);
-		ArrayList<HashMap<String, String>> cities = new ArrayList<HashMap<String, String>>();
-		
-		
-		while(true) {
-			cities.clear();
-			String input = reader.nextLine();
-			if(input.equals("#"))
-				return;
-			while(!input.substring(0, 1).equals("e")) {
-				
-				String[] chars = input.split(",");
-				HashMap<String,String> temp = new HashMap<String,String>();
-				for(String x : chars) {
-					temp.put(x.substring(0, 1), x.substring(2,3));
-				}
-				cities.add(temp);
-				input = reader.nextLine();
-			}
-			//System.out.println("Out of parsing");
-			int bestScore = -1;
-			int bestCity = -1;
-			
-			for (int city=0; city<cities.size(); city++) {
-				int score = 5*cities.size();
-				for (int otherCity=0; otherCity<cities.size(); otherCity++) {
-					String[] keys = {"r", "o", "y", "g", "b"};
-					for (String key : keys) {
-						if (!cities.get(city).get(key).equals(cities.get(otherCity).get(key))) {
-							score -= 1;
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        ArrayList<HashMap<String, String>> cities = new ArrayList<HashMap<String, String>>();
+
+
+        while (true) {
+            cities.clear();
+            String input = reader.nextLine();
+            if (input.equals("#"))
+                return;
+            while (!input.substring(0, 1).equals("e")) {
+
+                String[] chars = input.split(",");
+                HashMap<String, String> temp = new HashMap<String, String>();
+                for (String x : chars) {
+                    temp.put(x.substring(0, 1), x.substring(2, 3));
+                }
+                cities.add(temp);
+                input = reader.nextLine();
+            }
+            //System.out.println("Out of parsing");
+            int bestScore = -1;
+            int bestCity = -1;
+
+            for (int city = 0; city < cities.size(); city++) {
+                int score = 5 * cities.size();
+                for (int otherCity = 0; otherCity < cities.size(); otherCity++) {
+                    String[] keys = {"r", "o", "y", "g", "b"};
+                    for (String key : keys) {
+                        if (!cities.get(city).get(key).equals(cities.get(otherCity).get(key))) {
+                            score -= 1;
 							/*
 							System.out.println("City # " + city);
 							System.out.println("Key " + key);
@@ -68,19 +68,19 @@ class Recycling154 {
 							System.out.println();
 							System.out.println();
 							*/
-						}
-							
-					}
-				}
-				//System.out.println("Score for city # " + city + " " +  score);
-				//System.out.println("Going to next city");
-				if (score > bestScore) {
-					bestScore = score;
-					bestCity = city;
-				}
-			}
-			
-			System.out.println(bestCity + 1);
-		}
-	}
+                        }
+
+                    }
+                }
+                //System.out.println("Score for city # " + city + " " +  score);
+                //System.out.println("Going to next city");
+                if (score > bestScore) {
+                    bestScore = score;
+                    bestCity = city;
+                }
+            }
+
+            System.out.println(bestCity + 1);
+        }
+    }
 }

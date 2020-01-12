@@ -19,45 +19,40 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.TreeMap;
 
+// https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=27&page=show_problem&problem=2619
 class UniqueSnowflakes11572 {
 
-	public static void main(String[] args)
-	{
-		Scanner reader = new Scanner(System.in);
-		Hashtable<Integer, Integer> table = new Hashtable<Integer,Integer>();
-		int testCases = reader.nextInt();
-		for(int j = 0 ; j < testCases; j++) {
-			int best = 0;
-			int snowflakes = reader.nextInt();
-			LinkedList<Integer> flakes = new LinkedList<Integer>();
-			for(int i = 0 ; i < snowflakes; i++) {
-				int newVal = reader.nextInt();
-				if (table.containsKey(newVal)) {
-					best = Math.max(best, flakes.size());
-					while (flakes.size() > 0) {
-						int val = flakes.remove(0);
-						table.remove(val);
-						if (val == newVal) break;
-					}
-				}
-				flakes.add(newVal);
-				table.put(newVal, newVal);
-			}
-			best = Math.max(best, flakes.size());
-			
-			System.out.println(best);
-			
-			flakes.clear();
-			table.clear();
-		}
-		
-		
-		
-		
-		
-		
-		
-	}
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        Hashtable<Integer, Integer> table = new Hashtable<Integer, Integer>();
+        int testCases = reader.nextInt();
+        for (int j = 0; j < testCases; j++) {
+            int best = 0;
+            int snowflakes = reader.nextInt();
+            LinkedList<Integer> flakes = new LinkedList<Integer>();
+            for (int i = 0; i < snowflakes; i++) {
+                int newVal = reader.nextInt();
+                if (table.containsKey(newVal)) {
+                    best = Math.max(best, flakes.size());
+                    while (flakes.size() > 0) {
+                        int val = flakes.remove(0);
+                        table.remove(val);
+                        if (val == newVal) break;
+                    }
+                }
+                flakes.add(newVal);
+                table.put(newVal, newVal);
+            }
+            best = Math.max(best, flakes.size());
+
+            System.out.println(best);
+
+            flakes.clear();
+            table.clear();
+        }
+
+
+    }
 }
 
 

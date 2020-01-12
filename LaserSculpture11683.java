@@ -21,26 +21,26 @@ import java.util.TreeMap;
 
 import javax.xml.ws.spi.http.HttpExchange;
 
+// https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=78&page=show_problem&problem=2730
 class LaserSculpture11683 {
 
-	public static void main(String[] args)
-	{
-		Scanner reader = new Scanner(System.in);
-		
-		int input = reader.nextInt();
-		while(input != 0) {
-			ArrayList<Integer> block = new ArrayList<Integer>();
-			int height = input;
-			int width = reader.nextInt();
-			
-			int answer = 0;
-			int higgy = height;
-			for (int i = 0; i < width; i++) {
-				int hig = reader.nextInt();
-				if (hig < higgy) answer = answer + (higgy - hig);
-				higgy = hig;
-			}
-			
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        int input = reader.nextInt();
+        while (input != 0) {
+            ArrayList<Integer> block = new ArrayList<Integer>();
+            int height = input;
+            int width = reader.nextInt();
+
+            int answer = 0;
+            int higgy = height;
+            for (int i = 0; i < width; i++) {
+                int hig = reader.nextInt();
+                if (hig < higgy) answer = answer + (higgy - hig);
+                higgy = hig;
+            }
+
 //			for(int i = 0; i < height; i++) {
 //				block.add(1);
 //			}
@@ -57,7 +57,7 @@ class LaserSculpture11683 {
 //					}
 //				}
 //			}
-			
+
 //			for(ArrayList<Integer> row : block) {
 //				for(int i : row) {
 //					System.out.print(i + " ");
@@ -73,9 +73,9 @@ class LaserSculpture11683 {
 //					last = space;
 //				}
 //			}
-			System.out.println(answer);
-			input = reader.nextInt();
-		}
-		
-	}
+            System.out.println(answer);
+            input = reader.nextInt();
+        }
+
+    }
 }

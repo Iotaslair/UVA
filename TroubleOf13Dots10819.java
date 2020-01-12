@@ -19,6 +19,7 @@ import java.util.TreeMap;
 
 /*
 	Doesn't work
+	https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=20&page=show_problem&problem=1760
  */
 class TroubleOf13Dots10819 {
 

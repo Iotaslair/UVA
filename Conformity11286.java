@@ -12,36 +12,36 @@ import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 
+// https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2261
 class Conformity11286 {
 
-	public static void main(String[] args)
-	{
-		Scanner reader = new Scanner(System.in);
-		HashMap<HashSet, Integer> list = new HashMap<HashSet, Integer>();
-				
-		int times = reader.nextInt();
-		while(times != 0) {
-			int highestCount = 0;
-			int peopleInHighest = 0;
-			
-			for (int j=0; j<times; j++) {
-				HashSet<Integer> temp = new HashSet<Integer>();
-				for(int i = 0; i < 5; i++) {
-					temp.add(reader.nextInt());
-				}
-				int hashCode = temp.hashCode();
-				int newAmount = 1+list.getOrDefault(temp, 0);
-				list.put(temp, newAmount);
-				if (newAmount > highestCount) {
-					highestCount = newAmount;
-					peopleInHighest = newAmount;
-				} else if (newAmount == highestCount) {
-					peopleInHighest += newAmount;
-				}
-			}
-			System.out.println(peopleInHighest);
-			times = reader.nextInt();
-			list.clear();
-		}
-	}
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        HashMap<HashSet, Integer> list = new HashMap<HashSet, Integer>();
+
+        int times = reader.nextInt();
+        while (times != 0) {
+            int highestCount = 0;
+            int peopleInHighest = 0;
+
+            for (int j = 0; j < times; j++) {
+                HashSet<Integer> temp = new HashSet<Integer>();
+                for (int i = 0; i < 5; i++) {
+                    temp.add(reader.nextInt());
+                }
+                int hashCode = temp.hashCode();
+                int newAmount = 1 + list.getOrDefault(temp, 0);
+                list.put(temp, newAmount);
+                if (newAmount > highestCount) {
+                    highestCount = newAmount;
+                    peopleInHighest = newAmount;
+                } else if (newAmount == highestCount) {
+                    peopleInHighest += newAmount;
+                }
+            }
+            System.out.println(peopleInHighest);
+            times = reader.nextInt();
+            list.clear();
+        }
+    }
 }

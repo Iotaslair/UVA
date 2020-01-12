@@ -21,40 +21,39 @@ import java.util.TreeMap;
 
 import javax.xml.ws.spi.http.HttpExchange;
 
+// https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=21&page=show_problem&problem=1876
 class ThrowingCardsAway10935 {
 
-	public static void main(String[] args)
-	{
-		Scanner reader = new Scanner(System.in);
-		int card = reader.nextInt();
-		while(card != 0) {
-			ArrayList<Integer> discard = new ArrayList<Integer>();
-			Deque<Integer> cards = new ArrayDeque<Integer>();
-			for (int i = 1; i < card+1; i++) {
-				cards.add(i);
-			}
-			while(cards.size() != 1) {
-				discard.add(cards.poll());
-				cards.addLast(cards.poll());
-			}
-			
-			if(!discard.isEmpty()) {
-				System.out.print("Discarded cards: ");
-				String out = "";
-				for(Integer x : discard) {
-					out = out + x + ", ";
-				}
-				out = out.substring(0, out.length() - 2);
-				System.out.println(out);
-			}
-			else {
-				System.out.println("Discarded cards:");
-			}
-			System.out.println("Remaining card: " + cards.poll());
-			
-			
-			card = reader.nextInt();
-		}
-		
-	}
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        int card = reader.nextInt();
+        while (card != 0) {
+            ArrayList<Integer> discard = new ArrayList<Integer>();
+            Deque<Integer> cards = new ArrayDeque<Integer>();
+            for (int i = 1; i < card + 1; i++) {
+                cards.add(i);
+            }
+            while (cards.size() != 1) {
+                discard.add(cards.poll());
+                cards.addLast(cards.poll());
+            }
+
+            if (!discard.isEmpty()) {
+                System.out.print("Discarded cards: ");
+                String out = "";
+                for (Integer x : discard) {
+                    out = out + x + ", ";
+                }
+                out = out.substring(0, out.length() - 2);
+                System.out.println(out);
+            } else {
+                System.out.println("Discarded cards:");
+            }
+            System.out.println("Remaining card: " + cards.poll());
+
+
+            card = reader.nextInt();
+        }
+
+    }
 }

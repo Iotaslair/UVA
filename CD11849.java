@@ -15,32 +15,32 @@ import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 
+// https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=226&page=show_problem&problem=2949
 class CD11849 {
 
-	public static void main(String[] args)
-	{
-		Scanner reader = new Scanner(System.in);
-		int n = reader.nextInt();
-		int m = reader.nextInt();
-		while(n != 0 && m != 0) {
-			//Comment out for extra credit
-			ArrayList<Integer> jack = new ArrayList<Integer>();
-			ArrayList<Integer> jill = new ArrayList<Integer>();
-			
-			//Extra Credit
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        int n = reader.nextInt();
+        int m = reader.nextInt();
+        while (n != 0 && m != 0) {
+            //Comment out for extra credit
+            ArrayList<Integer> jack = new ArrayList<Integer>();
+            ArrayList<Integer> jill = new ArrayList<Integer>();
+
+            //Extra Credit
 //			int[] jack = new int[n];
 //			int[] jill = new int[m];
-			int rtn = 0;
-			
-			//Comment out for extra credit
-			for (int i = 0; i < n; i++) {
-				jack.add(reader.nextInt());
-			}
-			for (int i = 0; i < m; i++) {
-				jill.add(reader.nextInt());
-			}
-			
-			
+            int rtn = 0;
+
+            //Comment out for extra credit
+            for (int i = 0; i < n; i++) {
+                jack.add(reader.nextInt());
+            }
+            for (int i = 0; i < m; i++) {
+                jill.add(reader.nextInt());
+            }
+
+
 //			Extra Credit
 //			for (int i = 0; i < n; i++) {
 //				jack[i] = reader.nextInt();
@@ -48,16 +48,16 @@ class CD11849 {
 //			for (int i = 0; i < m; i++) {
 //				jill[i] = reader.nextInt();
 //			}
-			
-			
-			//comment out for extra credit
-			for(int i = 0; i < jack.size(); i++) {
-				if(jill.contains(jack.get(i))) {
-					rtn++;
-				}
-			}
-			
-			//Extra credit
+
+
+            //comment out for extra credit
+            for (int i = 0; i < jack.size(); i++) {
+                if (jill.contains(jack.get(i))) {
+                    rtn++;
+                }
+            }
+
+            //Extra credit
 //			int j = 0;
 //			for(int i = 0; i < n; i++) {
 //				for (; j < m; j++) {
@@ -66,13 +66,13 @@ class CD11849 {
 //				if (j >= m) break;
 //				if (jill[j] == jack[i]) rtn++;
 //			}
-			
-			
-			n = reader.nextInt();
-			m = reader.nextInt();
-			System.out.println(rtn);
-		}
-	}
+
+
+            n = reader.nextInt();
+            m = reader.nextInt();
+            System.out.println(rtn);
+        }
+    }
 }
 
 
