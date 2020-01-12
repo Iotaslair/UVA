@@ -21,7 +21,7 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.TreeMap;
 
-class Main {
+class Argus1203 {
 	static class CommandComparator implements Comparator<Command> {
 		public int compare(Command c1, Command c2) {
 			int out = c1.time-c2.time;

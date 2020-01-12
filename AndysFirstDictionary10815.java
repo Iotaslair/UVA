@@ -21,7 +21,7 @@ import java.util.TreeMap;
 
 import javax.xml.ws.spi.http.HttpExchange;
 
-class Main {
+class AndysFirstDictionary10815 {
 
 	public static void main(String[] args)
 	{

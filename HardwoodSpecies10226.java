@@ -18,7 +18,7 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.TreeMap;
 
-class Main {
+class HardwoodSpecies10226 {
 
 	public static void main(String[] args)
 	{

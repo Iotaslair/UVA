@@ -20,7 +20,7 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.TreeMap;
 
-class Main {
+class DNASorting612 {
 	static class EntropyComp implements Comparator<String> {
 		public EntropyComp() {}
 		
@@ -61,7 +61,7 @@ class Main {
 				al.add(reader.next());
 			}
 			
-			Collections.sort(al, new Main.EntropyComp());
+			Collections.sort(al, new DNASorting612.EntropyComp());
 			
 			for (int s=0; s<al.size(); s++) {
 				System.out.println(al.get(s));

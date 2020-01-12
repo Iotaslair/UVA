@@ -21,7 +21,7 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.TreeMap;
 
-class Main {
+class ICanGuessTheDataStructure11995 {
 	public static void main(String[] args)
 	{	
 		Scanner reader = new Scanner(System.in);

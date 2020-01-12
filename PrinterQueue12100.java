@@ -1,11 +1,11 @@
 import java.util.ArrayDeque;
 import java.util.Scanner;
 
-public class MinQueue<T extends Comparable> {
+public class PrinterQueue12100<T extends Comparable> {
 	ArrayDeque<T> backing;
 	ArrayDeque<T> minDeque;
 
-	public MinQueue() {
+	public PrinterQueue12100() {
 		backing = new ArrayDeque<T>();
 		minDeque = new ArrayDeque<T>();
 	}
@@ -56,7 +56,7 @@ public class MinQueue<T extends Comparable> {
 			int printJobs = reader.nextInt();
 			int myPos = reader.nextInt();
 			
-			MinQueue<Integer> queue = new MinQueue<Integer>();
+			PrinterQueue12100<Integer> queue = new PrinterQueue12100<>();
 			for(int j = 0; j < printJobs; j++) {
 				queue.add(-1 * reader.nextInt());
 			}

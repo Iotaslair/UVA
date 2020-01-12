@@ -12,7 +12,7 @@ import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 
-class 11286Conformity {
+class Conformity11286 {
 
 	public static void main(String[] args)
 	{

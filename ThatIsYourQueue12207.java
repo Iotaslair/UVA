@@ -10,7 +10,7 @@ import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 
-class Main {
+class ThatIsYourQueue12207 {
 
 	public static void main(String[] args)
 	{

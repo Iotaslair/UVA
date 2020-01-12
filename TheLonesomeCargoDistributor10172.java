@@ -8,7 +8,7 @@ import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 
-class Main {
+class TheLonesomeCargoDistributor10172 {
 
 	public static void main(String[] args)
 	{

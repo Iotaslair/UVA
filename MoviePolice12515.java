@@ -22,7 +22,7 @@ import java.util.TreeMap;
 
 import javax.xml.ws.spi.http.HttpExchange;
 
-class Main {
+class MoviePolice12515 {
 
 	public static void main(String[] args)
 	{

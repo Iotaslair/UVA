@@ -21,7 +21,7 @@ import java.util.TreeMap;
 
 import javax.xml.ws.spi.http.HttpExchange;
 
-class Main {
+class ThrowingCardsAway10935 {
 
 	public static void main(String[] args)
 	{
